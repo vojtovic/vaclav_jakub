@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoris",
+  "info": {
+    "singularName": "categori",
+    "pluralName": "categoris",
+    "displayName": "Categori",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "shortname": {
+      "type": "string",
+      "required": true
+    },
+    "ikona": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}
