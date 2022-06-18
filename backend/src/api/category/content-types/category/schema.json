@@ -4,64 +4,31 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "article",
+    "displayName": "Category",
+    "name": "category",
     "description": ""
   },
   "options": {
+    "increments": true,
+    "timestamps": true,
     "draftAndPublish": false
   },
-  "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "name": {
       "type": "string",
-      "required": true,
-      "minLength": 5
+      "required": true
     },
-    "img": {
+    "zkratka": {
+      "type": "string",
+      "required": true
+    },
+    "fotka": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
-    },
-    "hltext": {
-      "type": "richtext",
-      "required": true
-    },
-    "podnadpis": {
-      "type": "string",
-      "required": false
-    },
-    "datumzapisu": {
-      "type": "date",
-      "required": true
-    },
-    "like": {
-      "type": "boolean",
-      "required": false
-    },
-    "dislike": {
-      "type": "boolean"
-    },
-    "video": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "videos"
-      ]
-    },
-    "nadpisvidea": {
-      "type": "string"
-    },
-    "categoris": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::categori.categori"
     }
   }
 }
